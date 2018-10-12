@@ -3,6 +3,8 @@
 	<head>
 
 		<title>SVG Super Powers</title>
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 
 	</head>
 	<body>
@@ -22,20 +24,55 @@
 
 		<p>SVG's are inherently much smaller than their rasterized cousins. This is due to the fact that, rather than declaring what color every pixel in an image is, the SVG file declares points and curves. Then, it strokes paths or fills shapes with color. This is more intensive on the CPU, but results in a much smaller filesize.</p>
 
-		<em>compare basic SVG file with a JPG file</em>
+		<p>compare basic SVG file with a JPG file</p>
 
 		<p>If you are proficient with Inkscape, Illustrator, or Sketch, you can further downsize an SVG's filesize by minimizing the complexity that it has. Removing the number of waypoints reduces the complexity immensely.</p>
 
-		<em>compare basic SVG file with reduced file</em>
+		<p>compare basic SVG file with reduced file</p>
 
 		<p>You can further reduce an SVG file by running it through an optimization program, like <a href="https://github.com/svg/svgo">SVGO</a>. Be careful, though — if you reduce the complexity too much, you may make it more difficult to customize later on!</p>
 
-		<em>compare basic SVG file with optimized file</em>
+		<p>compare basic SVG file with optimized file</p>
 
 		<header>
 			<h2>Inline SVG</h2>
 			<p>The power of creation lays in your hands... What will you do?</p>
 		</header>
+
+		<p>You can create an SVG image inline by using an SVG tag. Even with basic shapes, you can create an intricate user experience without using much bandwitdth.</p>
+
+		<svg width="200" height="200">
+			<circle
+				cx="100"
+				cy="100"
+				r="46"
+				stroke="green"
+				stroke-width="2"
+				fill="yellow" />
+		</svg>
+
+		<p>You can add multiple shapes and assets in a single SVG tag.</p>
+
+		<svg width="200" height="200">
+			<circle
+				cx="50"
+				cy="50"
+				r="46"
+				stroke="green"
+				stroke-width="2"
+				fill="yellow" />
+			<rect
+				x="70"
+				y="20"
+				rx="20"
+				ry="20"
+				width="150"
+				height="150"
+				stroke="powderblue"
+				stroke-width="12"
+				opacity="0.5"
+				fill="tan" />
+		</svg>
 
 		<header>
 			<h2>Styles</h2>

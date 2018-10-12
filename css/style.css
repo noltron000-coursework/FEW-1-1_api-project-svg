@@ -1,0 +1,122 @@
+body {
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+}
+
+  /*-------------------*/
+ /*  Type Formatting  */
+/*-------------------*/
+
+h1 { /* primary title */
+	font-size: 6em;
+	padding-top: 0.125em;
+	padding-bottom: 0.125em;
+	text-align: center;
+}
+
+h2 { /* split up into a few sections */
+	font-size: 4em;
+	padding-top: 0.125em;
+	padding-bottom: 0.125em;
+	text-align: center;
+}
+
+h3 { /* in case there are subsections */
+	font-size: 3em;
+	padding-top: 0.125em;
+	padding-bottom: 0.125em;
+}
+
+p { /* paragraphs appear everywhere */
+	font-size: 1em;
+	padding-top: 0.125em;
+	padding-bottom: 0.125em;
+	padding-left: 10vw;
+	padding-right: 10vw;
+}
+
+  /*----------------*/
+ /*  Big Sections  */
+/*----------------*/
+
+
+section {
+	padding-left:  5vw;
+	padding-right: 5vw;
+}
+
+.overlay-text {
+}
+
+header, footer {
+	padding-left: 2vw;
+	padding-right: 2vw;
+
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+}
+
+header p {
+	font-size: 2em;
+	font-style: italic;
+	padding-left: 20vw;
+	padding-right: 20vw;
+	opacity: 0.625;
+}
+
+header {
+}
+
+footer {
+}
+
+.navbar { /* Top of the World */
+	width: 100%;
+
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.nav-section { /* Sandwiched between */
+	width: 35%;
+	min-width: calc(666px * 35 / 100);
+
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+  /*-----------------*/
+ /*  Customization  */
+/*-----------------*/
+
+
+#view-0 { /* This is the title view with a hero image */
+	background-color: #588E00;
+	background-image: url(../jpg/altitude-bright-clouds-671658.jpg);
+	background-size: cover;
+}
+
+#view-1 {
+	background-color: #73BA00;
+	background-image: url(../jpg/adventure-cold-daylight-416821.jpg);
+	background-size: cover;
+}
+
+#view-2 {
+	background-color: #CABB00;
+	background-image: url(../jpg/black-and-white-cold-fog-235621.jpg);
+	background-size: cover;
+	text-align: right;
+}
+
+#view-3 {
+	background-color: #00855D;
+	background-image: url(../jpg/cold-colors-forest-688660.jpg);
+	background-size: cover;
+	text-align: center;
+}
