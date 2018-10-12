@@ -18,4 +18,8 @@ One can't explain vector graphics easily without comparing them to raster graphi
 > 
 > _— <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">MDN Web Docs</a>_
 
-An SVG is an acronym for Scalable Vector Graphics. They
+An SVG is an acronym for Scalable Vector Graphics. While raster images take large amounts of bandwidth to download assets, SVG files are relatively small in filesize. The drawback is that the client's computer must process the file once it reaches their machine—however this process is comparably minimal, especially for less complex assets.
+
+Raster images remain a better choice for realistic and textured images, like photography. Extremely complex SVG files take heavy resources to compute. As such, SVG files are usually stylized and simple.
+
+### SVG Super Powers
