@@ -23,3 +23,15 @@ An SVG is an acronym for Scalable Vector Graphics. While raster images take larg
 Raster images remain a better choice for realistic and textured images, like photography. Extremely complex SVG files take heavy resources to compute. As such, SVG files are usually stylized and simple.
 
 ### SVG Super Powers
+
+#### CSS Styles
+
+#### Animation
+
+#### Breakpoints
+
+## Resources
+
+- https://developer.mozilla.org/en-US/docs/Web/SVG
+- https://svgontheweb.com/
+- https://medium.com/@aniboaz/animate-svg-4fa7dd00e860
