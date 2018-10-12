@@ -35,3 +35,4 @@ Raster images remain a better choice for realistic and textured images, like pho
 - https://developer.mozilla.org/en-US/docs/Web/SVG
 - https://svgontheweb.com/
 - https://medium.com/@aniboaz/animate-svg-4fa7dd00e860
+- https://css-tricks.com/guide-svg-animations-smil/
