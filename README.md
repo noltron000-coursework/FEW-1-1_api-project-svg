@@ -16,6 +16,6 @@ One can't explain vector graphics easily without comparing them to raster graphi
 ## What is an SVG?
 > Scalable Vector Graphics (SVG) is an XML-based markup language for describing two dimensional based  vector graphics. SVG is essentially to graphics what HTML is to text.
 > 
-> <span style="text-align: right">https://developer.mozilla.org/en-US/docs/Web/SVG</span>
+> _— <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">MDN Web Docs</a>_
 
 An SVG is an acronym for Scalable Vector Graphics. They
