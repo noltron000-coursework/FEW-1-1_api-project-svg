@@ -36,3 +36,5 @@ Raster images remain a better choice for realistic and textured images, like pho
 - https://svgontheweb.com/
 - https://medium.com/@aniboaz/animate-svg-4fa7dd00e860
 - https://css-tricks.com/guide-svg-animations-smil/
+- https://www.visualcinnamon.com/2016/06/fun-data-visualizations-svg-gooey-effect.html
+- https://css-tricks.com/gooey-effect/
