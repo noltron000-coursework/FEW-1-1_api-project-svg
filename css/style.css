@@ -1,11 +1,12 @@
 
 
 body {
-background-color: #ff9d00;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23ff9d00' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fc8c16' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23f77c23' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23f06c2d' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23e85c34' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23de4d3b' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23d33f40' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23c63244' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23b82547' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23a91a4a' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%2399104b' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%2388074b' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%2377024a' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23660148' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23550144' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23430140' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%2332023a' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23220033' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
-background-attachment: fixed;
-background-size: cover;
-	font-size: 16px;
+	background-color: #ff9d00;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23ff9d00' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fc8c16' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23f77c23' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23f06c2d' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23e85c34' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23de4d3b' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23d33f40' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23c63244' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23b82547' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23a91a4a' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%2399104b' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%2388074b' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%2377024a' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23660148' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23550144' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23430140' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%2332023a' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23220033' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+	background-attachment: fixed;
+	background-size: cover;
+	color: white;
+	font-size: 24px;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -13,40 +14,81 @@ background-size: cover;
  /*  Type Formatting  */
 /*-------------------*/
 
+h1, h2, h3, h4, h5, h6, p,  header p, li, blockquote {
+	opacity: 0.5;
+	text-shadow: 1px 1px 2px black;
+}
+
 h1 { /* primary title */
 	font-size: 6em;
+	font-weight: bold;
 	padding-top: 0.125em;
 	padding-bottom: 0.125em;
+	margin-top: 0;
+	margin-bottom: 0;
 	text-align: center;
 }
 
 h2 { /* split up into a few sections */
 	font-size: 4em;
+	font-weight: bold;
 	padding-top: 0.125em;
 	padding-bottom: 0.125em;
+	margin-top: 0;
+	margin-bottom: 0;
 	text-align: center;
 }
 
 h3 { /* in case there are subsections */
 	font-size: 3em;
+	font-style: italic;
 	padding-top: 0.125em;
 	padding-bottom: 0.125em;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
 }
 
-header p {
-	font-size: 2em;
+header p { /* subheadings */
+	opacity: 0.25;
+	font-size: 1.5em;
 	font-style: italic;
 	padding-left: calc(100vw * 3 / 12);
 	padding-right: calc(100vw * 3 / 12);
-	opacity: 0.625;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
-p { /* paragraphs appear everywhere */
+p, li, blockquote { /* paragraphs appear everywhere */
 	font-size: 1em;
-	padding-top: 0.125em;
-	padding-bottom: 0.125em;
+	padding-top: 0.375em;
+	padding-bottom: 0.375em;
 	padding-left: calc(100vw * 2 / 12);
 	padding-right: calc(100vw * 2 / 12);
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+blockquote {
+	font-style:	italic;
+}
+
+a { /* white shadows contrast dark background */
+	color: #ff9d00;
+	opacity: 1;
+}
+
+a:visited { /* white shadows contrast dark background */
+	color: red;
+}
+
+a:hover { /* white shadows contrast dark background */
+	color: yellow;
+}
+
+
+ol, ul {
+	list-style: circle inside;
 }
 
   /*----------------*/
@@ -76,8 +118,17 @@ header {
 footer {
 }
 
-svg {
+svg, img {
+	display: block;
+	margin: auto;
+	padding-top: 16px;
+	padding-bottom: 16px;
 }
+
+img {
+	width: 900px;
+}
+
 .navbar { /* Top of the World */
 	width: 100%;
 

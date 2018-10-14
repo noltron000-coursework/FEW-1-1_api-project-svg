@@ -1,39 +1,59 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-
 		<title>SVG Super Powers</title>
 		<link rel="stylesheet" href="./css/reset.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="stylesheet" href="./css/shape.css" />
-
 	</head>
 	<body>
-		<header>
+		<header id="title">
 			<h1>SVG Super Powers</h1>
 			<p>Excalibur for graphics. A Legendary API for web assets</p>
 		</header>
 
-		<p></p>
+		<p>This project seeks to showcase all the amazing things that SVG's can do! The SVG API is a powerful open-source vector graphic standard, optimized for web use.</p>
+
+		<h3>Why Vectors?</h3>
+		<p>One can't explain vector graphics easily without comparing them to raster graphics...
+			<ul>
+				<li>Scalar Graphics: A raster (or scalar) graphic is an image defined by its pixels. It has a definate width and height. For example, an image might have a width of 892 pixels and a height of 116 pixels. If you zoom in far enough, you will be able to see the individual pixel colors for his type of image. <em>Here are some types of scalars:</em></li>
+				<ul>
+					<li>.jpg (compressed)</li>
+					<li>.png (lossless)</li>
+					<li>.gif (animated)</li>
+				</ul>
+				<li><b>Vector Graphics:</b> A vector graphic is an image defined by its flexible points. It has an indefinate width, height. If you zoom in a lot, the image's edges will continue to be completely smooth and crisp. <em>Here are some types of scalars:</em></li>
+				<ul>
+					<li>.svg (optimized for web)</li>
+					<li>.ai (for adobe illustrator)</li>
+					<li>.pdf (for documents)</li>
+					<li>.eps (decrepit)</li>
+				</ul>
+			</ul>
+		</p>
+
+		<h3>What is an SVG?</h3>
+		<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/SVG">Scalable Vector Graphics (SVG) is an XML-based markup language for describing two dimensional based  vector graphics. SVG is essentially to graphics what HTML is to text. 
+			<em>— <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">MDN Web Docs</a></em>
+		</blockquote>
+		
+		<p>An SVG is an acronym for Scalable Vector Graphics. While raster images take large amounts of bandwidth to download assets, SVG files are relatively small in filesize. The drawback is that the client's computer must process the file once it reaches their machine—however this process is comparably minimal, especially for less complex assets.</p>
+
+		<p>Raster images remain a better choice for realistic and textured images, like photography. Extremely complex SVG files take heavy resources to compute. As such, SVG files are usually stylized and simple.</p>
 
 		<header>
 			<h2>File Size</h2>
 			<p>Optimizing SVG for the most savage of frontiers — the Wild Wild Web</p>
 		</header>
 
-
+		<img src="png/twitter.png" />
 
 		<p>SVG's are inherently much smaller than their rasterized cousins. This is due to the fact that, rather than declaring what color every pixel in an image is, the SVG file declares points and curves. Then, it strokes paths or fills shapes with color. This is more intensive on the CPU, but results in a much smaller filesize.</p>
 
-		<p>compare basic SVG file with a JPG file</p>
-
 		<p>If you are proficient with Inkscape, Illustrator, or Sketch, you can further downsize an SVG's filesize by minimizing the complexity that it has. Removing the number of waypoints reduces the complexity immensely.</p>
 
-		<p>compare basic SVG file with reduced file</p>
-
 		<p>You can further reduce an SVG file by running it through an optimization program, like <a href="https://github.com/svg/svgo">SVGO</a>. Be careful, though — if you reduce the complexity too much, you may make it more difficult to customize later on!</p>
-
-		<p>compare basic SVG file with optimized file</p>
 
 		<header>
 			<h2>Inline SVG</h2>
@@ -42,7 +62,7 @@
 
 		<p>You can create an SVG image inline by using an SVG tag. The SVG tag sets up the environment you need to create SVGs. Like other HTML tags, the SVG tag can have yet more tags within itself. Basic tags, like circle and rect, draw shapes. You can create an intricate user experience without using much bandwitdth, even with just basic shapes.</p>
 
-		<svg width="200" height="200">
+		<svg width="300" height="200">
 			<circle
 				cx="100"
 				cy="100"
@@ -54,7 +74,7 @@
 
 		<p>You can add multiple shapes and assets in a single SVG tag. This allows us to come up with a more complicated piece.</p>
 
-		<svg width="200" height="200">
+		<svg width="300" height="200">
 			<circle
 				cx="72"
 				cy="72"
@@ -77,7 +97,7 @@
 
 		<p>By using filter tags, these shapes interact with one another in interesting ways. Things like opacity, blur, shadow, and contrast help create these effects behind the scenes. These tags are all prefixed with fe, as in feDropShadow</p>
 
-		<svg width="200" height="200">
+		<svg width="300" height="200">
 			<filter 
 				id="blurMe" 
 				x="-25%" 
