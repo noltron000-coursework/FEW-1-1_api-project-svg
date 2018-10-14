@@ -5,6 +5,7 @@
 		<title>SVG Super Powers</title>
 		<link rel="stylesheet" href="./css/reset.css" />
 		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/shape.css" />
 
 	</head>
 	<body>
@@ -39,7 +40,7 @@
 			<p>The power of creation lays in your hands... What will you do?</p>
 		</header>
 
-		<p>You can create an SVG image inline by using an SVG tag. Even with basic shapes, you can create an intricate user experience without using much bandwitdth.</p>
+		<p>You can create an SVG image inline by using an SVG tag. The SVG tag sets up the environment you need to create SVGs. Like other HTML tags, the SVG tag can have yet more tags within itself. Basic tags, like circle and rect, draw shapes. You can create an intricate user experience without using much bandwitdth, even with just basic shapes.</p>
 
 		<svg width="200" height="200">
 			<circle
@@ -47,20 +48,20 @@
 				cy="100"
 				r="46"
 				stroke="green"
-				stroke-width="2"
-				fill="yellow" />
+				stroke-width="3"
+				fill="#FC0" />
 		</svg>
 
 		<p>You can add multiple shapes and assets in a single SVG tag. This allows us to come up with a more complicated piece.</p>
 
 		<svg width="200" height="200">
 			<circle
-				cx="64"
-				cy="64"
+				cx="72"
+				cy="72"
 				r="46"
 				stroke="green"
 				stroke-width="3"
-				fill="yellow" />
+				fill="#FC0" />
 			<rect
 				x="70"
 				y="20"
@@ -74,16 +75,41 @@
 				fill="tan" />
 		</svg>
 
-		<p>By using filter tags, have these shapes interact with one another in interesting ways. Things like opacity, blur, shadow, and contrast help create these effects behind the scenes. </p>
+		<p>By using filter tags, these shapes interact with one another in interesting ways. Things like opacity, blur, shadow, and contrast help create these effects behind the scenes. These tags are all prefixed with fe, as in feDropShadow</p>
 
 		<svg width="200" height="200">
-			<circle
-				cx="64"
-				cy="64"
+			<filter 
+				id="blurMe" 
+				x="-25%" 
+				y="-25%"
+				height="200%"
+				width="200%">
+				<feTurbulence 
+					type="turbulence"
+					baseFrequency="0.05"
+					numOctaves="2"
+					result="turbulence" />
+				<feDisplacementMap
+					in2="turbulence"
+					in="SourceGraphic"
+					scale="20"
+					xChannelSelector="R"
+					yChannelSelector="G" />
+				<feGaussianBlur
+					stdDeviation="0.25" />
+				<feDropShadow
+					dx="0"
+					dy="0"
+					stdDeviation="8"/>
+			</filter>
+			<circle class="eyes"
+				cx="72"
+				cy="72"
 				r="46"
 				stroke="green"
 				stroke-width="3"
-				fill="yellow" />
+				fill="#FC0"
+				filter="url(#blurMe)" />
 			<rect
 				x="70"
 				y="20"
@@ -94,7 +120,8 @@
 				stroke="powderblue"
 				stroke-width="12"
 				opacity="0.5"
-				fill="tan" />
+				fill="tan"
+				filter="url(#blurMe)" />
 		</svg>
 
 		<header>
@@ -102,14 +129,221 @@
 			<p>Every SVG is beautiful.</p>
 		</header>
 
+		<p>vanilla</p>
+
+		<svg width="100" height="100">
+			<circle
+				cx="25"
+				cy="25"
+				r="10"/>
+			<circle
+				cx="75"
+				cy="25"
+				r="10" />
+			<path
+				d="M10 10 C 20 20, 40 20, 50 10"
+				stroke="black"
+				fill="transparent" />
+			<path
+				d="M70 10 C 70 20, 120 20, 120 10"
+				stroke="black"
+				fill="transparent" />
+			<path
+				d="M10 60 C 30 80, 90 80, 90 60"
+				stroke="black"
+				fill="transparent" />
+		</svg>
+
+		<p>classes</p>
+
+		<svg width="100" height="100">
+			<circle
+				class="left eye"
+				cx="25"
+				cy="25"
+				r="10"/>
+			<circle
+				class = "right eye"
+				cx="75"
+				cy="25"
+				r="10" />
+			<path
+				class="left brow"
+				d="M10 10 C 20 20, 40 20, 50 10"
+				stroke="black"
+				fill="transparent" />
+			<path
+				class="right brow"
+				d="M70 10 C 70 20, 120 20, 120 10"
+				stroke="black"
+				fill="transparent" />
+			<path
+				class="mouth"
+				d="M10 60 C 30 80, 90 80, 90 60"
+				stroke="black"
+				fill="transparent" />
+		</svg>
+
+		<p>psuedoclasses</p>
+
+		<svg class="psuedo" width="100" height="100">
+			<circle
+				class="left eye"
+				cx="25"
+				cy="25"
+				r="10"/>
+			<circle
+				class = "right eye"
+				cx="75"
+				cy="25"
+				r="10" />
+			<path
+				class="left brow"
+				d="M10 10 C 20 20, 40 20, 50 10"
+				stroke="black"
+				fill="transparent" />
+			<path
+				class="right brow"
+				d="M70 10 C 70 20, 120 20, 120 10"
+				stroke="black"
+				fill="transparent" />
+			<path
+				class="mouth"
+				d="M10 60 C 30 80, 90 80, 90 60"
+				stroke="black"
+				fill="transparent" />
+		</svg>
+
 		<header>
 			<h2>Breakpoints</h2>
 			<p></p>
 		</header>
 
+		<p>I've included a shiba that will change displays as you change the screen. This is actually interesting because the shib images themselves are rasters, but the SVG tag handles the breakpoints. Naturally, this can be done with vectors as well.</p>
+
+		<svg width="950" height="627" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<g id="sm">
+				<defs>
+					<style type="text/css">
+						g#sm:first-of-type {
+							display: none;
+						}
+						@media screen and (max-width: 300px) {
+							g#sm:first-of-type {
+								display: block
+							}
+						}
+					</style>
+				</defs>
+				<image
+					y="0"
+					x="0"
+					id="small"
+					class="img"
+					href="jpg/small.jpg" />
+			</g>
+			<g id="med">
+				<title>Simple SVG + mediaqueries</title>
+				<defs>
+					<style type="text/css">
+						g#med {
+							display: none;
+						}
+
+						@media screen and (min-width: 301px) and (max-width: 600px) {
+							g#med {
+								display: block
+							}
+						}
+					</style>
+				</defs>
+				<image
+					y="0"
+					x="0"
+					id="medium"
+					class="img"
+					href="jpg/medium.jpg" />
+			</g>
+			<g id="bg">
+				<title>Simple SVG + mediaqueries</title>
+				<defs>
+					<style type="text/css">
+						g#bg {
+							display: none;
+						}
+						@media screen and (min-width: 601px) and (max-width: 900px) {
+							g#bg {
+								display: block
+							}
+						}
+					</style>
+				</defs>
+				<image
+					y="0"
+					x="0"
+					id="big"
+					class="img"
+					href="jpg/big.jpg" />
+			</g>
+			<g id="lg">
+				<title>Simple SVG + mediaqueries</title>
+				<defs>
+					<style type="text/css">
+						g#lg {
+							display: none;
+						}
+						@media screen and (min-width: 901px) {
+							g#lg {
+								display: block
+							}
+						}
+					</style>
+				</defs>
+				<image
+					y="0"
+					x="0"
+					id="huge"
+					class="img"
+					href="jpg/huge.jpg" />
+			</g>
+		</svg>
+
 		<header>
 			<h2>Animation</h2>
 			<p></p>
 		</header>
+
+		<p>
+
+		</p>
+
+		<svg
+			viewBox="0 0 160 160"
+			width="160"
+			height="160">
+			<circle
+				class="reveal"
+				cx="80"
+				cy="80"
+				r="50" />
+			<g
+				transform="matrix(0.866, -0.5, 0.25, 0.433, 80, 80)">
+				<path
+					d="M 0,70 A 65,70 0 0,0 65,0 5,5 0 0,1 75,0 75,70 0 0,1 0,70Z"
+					fill="#FC0">
+					<animateTransform
+						attributeName="transform"
+						type="rotate" from="360 0 0"
+						to="0 0 0"
+						dur="1s"
+						repeatCount="indefinite" />
+				</path>
+			</g>
+			<path
+				class="reveal"
+				d="M 50,0 A 50,50 0 0,0 -50,0Z"
+				transform="matrix(0.866, -0.5, 0.5, 0.866, 80, 80)" />
+		</svg>
+
 	</body>
 </html>
